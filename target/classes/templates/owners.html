@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{/css/petcilinic.css}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<table>
+			<thead>
+				<tr style="font-weight: bold;">
+					<td>Id</td>
+					<td>Ad</td>
+					<td>Soyad</td>
+				</tr>
+			</thead>			
+			<tbody>
+			<th:block th:each="ls:${owners}">
+				<tr>					
+					<td th:text="${ls.id}" />
+					<td th:text="${ls.firtName}" />
+					<td th:text="${ls.lastName}" />
+				</tr>
+			</th:block>
+			
+			
+				
+			</tbody>
+	</table>
+
+</body>
+</html>
